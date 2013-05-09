@@ -3,7 +3,8 @@
  *
  * Simple to use.
  * To make a spinner with the default values:
- * Create an <ul> with a unique ID, then put each image tag (in order) in it's own <li> tag
+ * Create an <ul> with a unique ID,
+ * then put each image tag (in order) in it's own <li> tag
  * Then, simple add the following JS:
  * $(document).ready(function() {
  *   $('#YOUR_UL_ID').pitchcare360()
