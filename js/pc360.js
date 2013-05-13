@@ -3,8 +3,7 @@
  *
  * Simple to use.
  * To make a spinner with the default values:
- * Create an <ul> with a unique ID,
- * then put each image tag (in order) in it's own <li> tag
+ * Create an <ul> with a unique ID, then put each image tag (in order) in it's own <li> tag
  * Then, simple add the following JS:
  * $(document).ready(function() {
  *   $('#YOUR_UL_ID').pitchcare360()
@@ -67,7 +66,6 @@
       // Append a zoom button to the spinners parent (which should be a <span id="main-image" />)
       if (settings.enableZoom) {
         wrapperContainer.parent().append(
-          'Click and drag to rotate<br>' +
           '<a class="pc360-zoom" href="#"><img src="' + settings.zoomImage + '"></a>'
         )
         // Now some mouse events for the zoom zoom button!
@@ -172,7 +170,7 @@
           var zoomContent = '<ul id="zoomSpinner">' +
             zoomElement.html() +
             '</ul>' +
-            '<br>Click and drag to rotate' +
+            '<br><img src="' + settings.dragImage + '">' +
             '<br><a href="#" onClick="return false" class="pc360-close">Close</a>'
           if ($('.pc360-zoom-divs').length) {
             $('.pc360-zoom-divs').fadeIn(500, function () {
@@ -234,7 +232,7 @@
               setTimeout(function () {
                 $('.pc360-zoom-child').css({
                   'width':  parseInt($('#zoomSpinner').children().children('img:first').css('width'), 10) + 'px',
-                  'height': (parseInt($('#zoomSpinner').children().children('img:first').css('height'), 10) + 45) + 'px'
+                  'height': (parseInt($('#zoomSpinner').children().children('img:first').css('height'), 10) + 80) + 'px'
                 })
               }, 500)
               $('#zoomSpinner').pitchcare360({
@@ -382,9 +380,10 @@
     defaultHeight:  250,
     firstZindex:    9998,
     secondZindex:   9999,
-    thumbnailURL:   '/pitchcare/media.php?hash=1/',
-    largeURL:       '/pitchcare/media.php?hash=L/',
-    zoomImage:      '//media.pitchcare.com/O/hhLa9H3wYHZuzRPlxOpd.png'
+    thumbnailURL:   '//media.pitchcare.com/1/',
+    largeURL:       '//media.pitchcare.com/L/',
+    zoomImage:      '//media.pitchcare.com/O/rrtbcJx55GYYEPnGEI20.png',
+    dragImage:      '//media.pitchcare.com/O/xzfWv8UzAwElNvUJPoD9.png'
   }
 
 })(jQuery);
